@@ -5,19 +5,19 @@ layout: default
 <article class="columns is-multiline mb-5 is-justify-content-center">
   <div class="column is-10-desktop mb-4">
     <h1 class="h2 mb-3">{{ page.title | escape }}</h1>
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <ul class="list-inline post-meta mb-3">
       <li class="list-inline-item">Date : {{ page.date | date: date_format }}</li>
-      {%- if page.categories -%}
+      {% if page.categories %}
       <li class="list-inline-item">Categories : 
-      {%- for category in page.categories -%}<a href="#!" class="ml-1">{{ category }}</a>{%- endfor -%}
+      {% for category in page.categories %}<a href="#!" class="ml-1">{{ category }}</a>{% endfor %}
       </li>
-      {%- endif -%}
-      {%- if page.tags -%}
+      {% endif %}
+      {% if page.tags %}
       <li class="list-inline-item">Tags : 
-      {%- for tag in page.tags -%}<a href="#!" class="ml-1">{{ tag }}</a>{%- endfor -%}
+      {% for tag in page.tags %}<a href="#!" class="ml-1">{{ tag }}</a>{% endfor %}
       </li>
-      {%- endif -%}
+      {% endif %}
     </ul>
   </div>
   <!-- <div class="column is-12 mb-3">
@@ -31,9 +31,9 @@ layout: default
     </div>
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

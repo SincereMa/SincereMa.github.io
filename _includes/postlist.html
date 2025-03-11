@@ -1,0 +1,49 @@
+{% if paginator.posts.size > 0 %}
+{% for post in paginator.posts %}
+<article class="columns is-multiline is-justify-content-center mb-6">
+  <div class="column is-12">
+    {% if post.thumbs %}
+    <div class="post-slider">
+      {% for thumb in post.thumbs %}
+      <img loading="lazy" src="{{ "/assets/images/post/" | append: thumb | relative_url }}" class="" alt="post-thumb">
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="column is-12">
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <h3><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <ul class="list-inline post-meta mb-4">
+      <li class="list-inline-item">Date : {{ post.date | date: date_format }}</li>
+      {% if post.categories %}
+      <li class="list-inline-item">Categories : 
+      {% for category in post.categories %}<a href="#!" class="ml-1">{{ category }}</a>{% endfor %}
+      </li>
+      {% endif %}
+      {% if post.tags %}
+      <li class="list-inline-item">Tags : 
+      {% for tag in post.tags %}<a href="#!" class="ml-1">{{ tag }}</a>{% endfor %}
+      </li>
+      {% endif %}
+    </ul>
+    <p>{{ post.excerpt }}</p>
+    <a href="{{ post.url | relative_url }}" class="btn btn-outline-primary">Continue Reading</a>
+  </div>
+</article>
+{% endfor %}
+{% endif %}
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<nav class="pagination is-centered is-small" role="navigation" aria-label="pagination">
+  <a href="{{ paginator.previous_page_path }}" class="pagination-previous">Previous</a>
+  <a href="{{ paginator.next_page_path }}" class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li>
+      <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+    </li>
+  </ul>
+</nav>
+{% endif %}

@@ -1,0 +1,22 @@
+<h2>{{ page.title }}</h2>
+{% for tag in site.tags %}
+<article class="columns is-multiline is-justify-content-center mb-6">
+  <div class="column is-12">
+    <h3>{{ tag[0] }}</h3>
+  </div>
+  <div class="column is-12">
+    {% for post in tag[1] %}
+    <h4><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+    <ul class="list-inline post-meta mb-4">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <li class="list-inline-item">Date : {{ post.date | date: date_format }}</li>
+      {% if post.categories %}
+      <li class="list-inline-item">Categories : 
+      {% for category in post.categories %}{{ category }}{% endfor %}
+      </li>
+      {% endif %}
+    </ul>
+    {% endfor %}
+  </div>
+</article>
+{% endfor %}

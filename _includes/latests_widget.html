@@ -1,22 +1,22 @@
 <div class="widget">
   <h5 class="widget-title"><span>Latest Article</span></h5>
   <!-- post-item -->
-  {%- for post in site.posts limit: 3 -%}
   <ul class="list-unstyled widget-list">
+    {% for post in site.posts limit: 3 %}
     <li class="media widget-post is-align-items-center">
       <a href="{{ post.url | relative_url }}">
-        {%- if post.thumbs.size > 0 -%}
+        {% if post.thumbs.size > 0 %}
         <img loading="lazy" src="{{ "/assets/images/post/" | append: post.thumbs[0] | relative_url }}" class="" alt="post-thumb">
         {% else %}
         <img loading="lazy" src="{{ "/assets/images/post/" | append: 'default.png' | relative_url }}" class="" alt="post-thumb">
-        {%- endif -%}
+        {% endif %}
       </a>
       <div class="ml-4">
         <h5 class="h6 mb-0"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         <small>{{ post.date | date: date_format }}</small>
       </div>
     </li>
+    {% endfor %}
   </ul>
-  {%- endfor -%}
 </div>
