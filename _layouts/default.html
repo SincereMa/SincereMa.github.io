@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
+  
+  <!-- navigation -->
+  {%- include header.html -%}
+  <!-- /navigation -->
 
-    {%- include header.html -%}
+  <section class="section">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+  
+  <!-- footer -->
+  {%- include footer.html -%}
+  <!-- /footer -->
 
-    {%- include footer.html -%}
 
-  </body>
+  <!-- JS Plugins -->
+  <script src="{{ "/assets/plugins/jQuery/jquery.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/plugins/slick/slick.min.js" | relative_url }}"></script>
+
+  <!-- Main Script -->
+  <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
+</body>
 
 </html>

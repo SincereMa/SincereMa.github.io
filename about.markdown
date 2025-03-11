@@ -1,18 +1,20 @@
 ---
 layout: page
-title: 关于
+title: Hi, I am Sincere
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+![](/assets/images/author-full.jpg)
 
 
-[jekyll-organization]: https://github.com/jekyll
+# 关于我
+
+嗨！我是 Sincere，一个热爱技术与自然的 IT 工程师。
+
+工作中，我专注于代码与新技术的探索，追求逻辑的美妙与问题的优雅解决方案。
+
+工作之余，我更享受独处的时光，喜欢远离喧嚣，沉浸在大自然的宁静之中，或者以脚步丈量这片土地的广阔。
+
+对于我来说，技术与自然是难以割舍的两大激情。它们都让我感受到独特的平静与自由。无论是深夜的代码调试，还是清晨的山间漫步，这两种状态都让我能够活得更加专注和充实。
+
+这就是我，一个在码码与自然间找到平衡的 IT 人。

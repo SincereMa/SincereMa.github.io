@@ -1,43 +1,44 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ " /" | relative_url }}"></data>
+<footer class="section-sm pb-0 border-top border-default">
+  <div class="container">
+    <div class="columns is-multiline is-justify-content-space-between is-centered">
+      <div class="column is-3-desktop">
+        <img src="{{ "/assets/images/log.svg" | relative_url }}" alt="logo">
+        <p>
+          {{ site.description | escape }}
+        </p>
+      </div>
 
-  <div class="wrapper">
-
-    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-            {{ site.author | escape }}
-            {%- else -%}
-            {{ site.title | escape }}
-            {%- endif -%}
-          </li>
+      <div class="column is-2-widescreen is-3-desktop is-6">
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled footer-list">
+          <li><a href="{{ "/about" | relative_url }}">About</a></li>
+          <li><a href="{{ "/contact" | relative_url }}">Contact</a></li>
+          <li><a href="{{ "/privacy_policy" | relative_url }}">Privacy Policy</a></li>
+          <li><a href="{{ "/terms_conditions" | relative_url }}">Terms Conditions</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- if site.email -%}
-        <ul class="contact-list">
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-        {%- endif -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
+      <div class="column is-2-widescreen is-3-desktop is-6">
+        <h6 class="mb-4">Social Links</h6>
         {%- include social.html -%}
       </div>
-    </div>
 
-    <!-- 添加独立的版权信息行 -->
-    <div class="copyright-container">
-      <p class="copyright">&copy;
-        <script>document.write(new Date().getFullYear())</script> {{ site.title | escape }}. All rights reserved.
-      </p>
+      <!-- <div class="column is-3-desktop">
+        <h6 class="mb-4">Subscribe Newsletter</h6>
+        <form class="subscription" action="javascript:void(0)" method="post">
+          <div class="is-relative">
+            <i class="ti-email email-icon"></i>
+            <input type="email" class="input" placeholder="Your Email Address">
+          </div>
+          <button class="btn btn-primary w-100 rounded mt-2" type="submit">Subscribe now</button>
+        </form>
+      </div> -->
     </div>
-
+    <div class="scroll-top">
+      <a href="javascript:void(0);" id="scrollTop"><i class="ti-angle-up"></i></a>
+    </div>
+    <div class="has-text-centered">
+      <p class="content">&copy; <script>document.write(new Date().getFullYear())</script> {{ site.title | escape }}. All rights reserved.</p>
+    </div>
   </div>
-
 </footer>

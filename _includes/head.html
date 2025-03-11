@@ -1,9 +1,27 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="This is meta description">
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <!-- plugins -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2"
+    style="font-display: optional;">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600%7cOpen&#43;Sans&amp;display=swap"
+    media="screen">
+  <link rel="stylesheet" href="{{ "/assets/plugins/bulma/bulma.min.css" | relative_url }}">
+
+  <link rel="stylesheet" href="{{ "/assets/plugins/themify-icons/themify-icons.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/plugins/slick/slick.css" | relative_url }}">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | relative_url }}" type="image/x-icon">
+  <link rel="icon" href="{{ "/assets/images/favicon.png" | relative_url }}" type="image/x-icon">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
