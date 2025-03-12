@@ -2,9 +2,12 @@
   <h5 class="widget-title"><span>Categories</span></h5>
   <ul class="list-unstyled widget-list">
     {% for category in site.categories %}
-    <li><a href="{{ "/category/#" | append: category[0] | escape }}" class="is-flex">
+    <li>
+      {% assign anchor = category[0] | cgi_escape | escape %}
+      <a href="{{ "/category/#" | append: anchor }}" class="is-flex">
         {{ category[0] }}
-        <small class="ml-auto">{{ category[1].size }}</small></a>
+        <small class="ml-auto">{{ category[1].size }}</small>
+      </a>
     </li>
     {% endfor %}
   </ul>

@@ -4,14 +4,7 @@ layout: default
 
 <div class="columns is-desktop is-multiline">
   <div class="column is-8-desktop">
-    {% if page.url == "/category/" %}
-      {% include category.html %}
-    {% elsif page.url == "/tag/" %}
-      {% include tag.html %}
-    {% else %}
-      {% include postlist.html %}
-    {% endif %}
-
+    {{ content }}
   </div>
   <aside class="column is-4-desktop">
     <!-- Search -->

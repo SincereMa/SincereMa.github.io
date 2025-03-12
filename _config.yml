@@ -21,7 +21,9 @@
 title: Sincere's Blog
 email: ma_ming2323@@163.com
 description: >- # this means to ignore newlines until "baseurl:"
-  ------ 凡是过往，皆为序章。 ------
+  --- “凡是过往，皆为序章。” ---
+  过往的挫折困境，不过是人生开篇。
+  身处逆境，持续学习是破局利刃。
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

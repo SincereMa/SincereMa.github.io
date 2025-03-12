@@ -3,7 +3,8 @@
   <ul class="list-inline widget-list-inline">
     {% for tag in site.tags %}
     <li class="list-inline-item">
-      <a href="{{ "/tag/#" | append: tag[0] | escape }}">{{ tag[0] }}</a>
+      {% assign anchor = tag[0] | cgi_escape | escape %}
+      <a href="{{ "/tag/#" | append: anchor }}">{{ tag[0] }}</a>
     </li>
     {% endfor %}
   </ul>
