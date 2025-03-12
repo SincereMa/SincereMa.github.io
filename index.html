@@ -7,29 +7,33 @@ layout: home
 
 {% if paginator.posts.size > 0 %}
 {% for post in paginator.posts %}
-<article class="columns is-multiline is-justify-content-center mx-6">
-  <div class="column is-12">
-    {% if post.thumbs %}
+<article class="columns is-multiline is-justify-content-center mb-6">
+  {% if post.thumb %}
+  <div class="column is-4-tablet">
     <div class="post-slider">
-      {% for thumb in post.thumbs %}
-      <img loading="lazy" src="{{ "/assets/images/post/" | append: thumb | relative_url }}" class="" alt="post-thumb">
-      {% endfor %}
+      <img loading="lazy" src="{{ post.thumb }}" alt="post-thumb">
     </div>
-    {% endif %}
   </div>
-  <div class="column is-12">
+  {% endif %}
+  <div class="column is-8-tablet">
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
     <h3><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <ul class="list-inline post-meta mb-4">
       <li class="list-inline-item">Date : {{ post.date | date: date_format }}</li>
       {% if post.categories %}
       <li class="list-inline-item">Categories : 
-      {% for category in post.categories %}<a href="#!" class="ml-1">{{ category }}</a>{% endfor %}
+      {% for category in post.categories %}
+      {% assign anchor = category | cgi_escape | escape %}
+      <a href="{{ "/category/#" | append: anchor }}" class="ml-1">{{ category }}</a>
+      {% endfor %}
       </li>
       {% endif %}
       {% if post.tags %}
       <li class="list-inline-item">Tags : 
-      {% for tag in post.tags %}<a href="#!" class="ml-1">{{ tag }}</a>{% endfor %}
+      {% for tag in post.tags %}
+      {% assign anchor = tag | cgi_escape | escape %}
+      <a href="{{ "/tag/#" | append: anchor }}" class="ml-1">{{ tag }}</a>
+      {% endfor %}
       </li>
       {% endif %}
     </ul>

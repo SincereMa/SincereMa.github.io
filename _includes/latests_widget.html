@@ -5,10 +5,10 @@
     {% for post in site.posts limit: 3 %}
     <li class="media widget-post is-align-items-center">
       <a href="{{ post.url | relative_url }}">
-        {% if post.thumbs.size > 0 %}
-        <img loading="lazy" src="{{ "/assets/images/post/" | append: post.thumbs[0] | relative_url }}" class="" alt="post-thumb">
+        {% if post.thumb %}
+        <img loading="lazy" src="{{ post.thumb }}" alt="post-thumb">
         {% else %}
-        <img loading="lazy" src="{{ "/assets/images/post/" | append: 'default.png' | relative_url }}" class="" alt="post-thumb">
+        <img loading="lazy" src="{{ "/assets/images/post/default.png" }}" alt="post-thumb">
         {% endif %}
       </a>
       <div class="ml-4">
