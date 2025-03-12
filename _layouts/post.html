@@ -20,20 +20,19 @@ layout: default
       {% endif %}
     </ul>
   </div>
-  <!-- <div class="column is-12 mb-3">
-    <div class="post-slider">
-      <img src="images/post/post-1.jpg" class="" alt="post-thumb">
-    </div>
-  </div> -->
-  <div class="column is-10-desktop">
+  <div class="column is-12 mb-3">
     <div class="content">
       {{ content }}
     </div>
   </div>
+  <div class="column is-10-desktop">
+    {% if site.disqus.shortname %}
+    <div class="post-slider">
+      {% include disqus_comments.html %}
+      <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    </div>
+    {% endif %}
+  </div>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  
 </article>
