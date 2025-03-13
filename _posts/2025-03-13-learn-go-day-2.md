@@ -7,6 +7,7 @@ tags: "Go语言高效学习"
 thumb: "/assets/images/post/Learn-Go-full.png"
 ---
 
+###### 针对NodeJS工程师的Go语言学习计划
 ###### 📅 阶段一：语法与基础入门（Days 1-3） 
 ###### 目标：掌握与NodeJS差异显著的语法和编程范式。 
 ###### Day 2：结构体与方法
