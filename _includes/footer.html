@@ -1,10 +1,11 @@
 <footer class="section-sm pb-0 border-top border-default">
   <div class="container">
     <div class="columns is-multiline is-justify-content-space-between">
-      <div class="column is-3-desktop">
+      <div class="column is-5-desktop">
         <img src="{{ "/assets/images/logo.svg" | relative_url }}" width="176" alt="logo">
-        <ul class="list-unstyled footer-list mt-5">
+        <ul class="list-unstyled footer-list">
           <li><p class="m-5">{{ site.description | escape }}</p></li>
+          <li><p class="m-5">Total <span id="busuanzi_value_site_pv"></span> visits on site</p></li>
         </ul>
       </div>
 
@@ -21,18 +22,6 @@
       <div class="column is-2-widescreen is-3-desktop is-6">
         <h6 class="mb-4">Social Links</h6>
         {% include social.html %}
-      </div>
-
-      <div class="column is-3-desktop">
-        <h6 class="mb-4">Counter</h6>
-        <ul class="list-unstyled footer-list">
-          <li>
-            Total <span id="busuanzi_value_site_pv"></span> views
-          </li>
-          <li>
-            Total <span id="busuanzi_value_site_uv"></span> visitors
-          </li>
-        </ul>
       </div>
     </div>
     <div class="scroll-top">
