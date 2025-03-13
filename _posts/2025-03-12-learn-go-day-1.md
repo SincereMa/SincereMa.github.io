@@ -19,6 +19,8 @@ thumb: "/assets/images/post/Learn-Go-full.png"
 
 本文涉及的代码链接：[Github](https://github.com/SincereMa/Go-Learn)
 
+## 知识点详解与对比
+
 ### 1. 变量、类型与函数
 
 #### 1.1 短变量声明
