@@ -13,7 +13,7 @@ thumb: "/assets/images/post/Learn-Go-Stage-2.png"
 ###### Day 5：标准库**net/http**与中间件
 
 
-![](/assets/images/post/Learn-Go-full.png)
+![](/assets/images/post/Learn-Go-Stage-2.png)
 
 ## 🚀 Go语言高效学习计划（NodeJS工程师版）
 目标：2周快速掌握核心概念，上手大型项目；后续深入高级特性
